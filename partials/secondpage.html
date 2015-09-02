@@ -1,0 +1,75 @@
+<img ng-src="{{photo}}" class="background-photo">
+<!-- side menu -->
+<div class="actions">
+
+    <div class="action-item" ng-click="backtoIndex()">
+        <span class="action-icon fa fa-arrow-left fa-3x"></span>
+        <span class="menu-name">Back</span>
+    </div>
+
+    <div class="action-item" ng-class="{active:isSet(1)}" ng-click="setTab(1)">
+        <span class="action-icon fa fa-book fa-3x"></span>
+        <span class="menu-name">Definition</span>
+    </div> 
+
+    <div class="action-item" ng-class="{active:isSet(2)}" ng-click="setTab(2)">
+        <span class="action-icon fa fa-gears fa-3x"></span>
+        <span class="menu-name">Drivers</span>
+    </div>     
+
+    <div class="action-item" ng-class="{active:isSet(3)}" ng-click="setTab(3)">
+        <span class="action-icon fa fa-wrench fa-3x"></span>
+        <span class="menu-name">Approaches</span>
+    </div>  
+
+    <div class="action-item" ng-class="{active:isSet(4)}" ng-click="setTab(4)">
+        <span class="action-icon fa fa-star fa-3x"></span>
+        <span class="menu-name">Outcomes</span>
+    </div>  
+       
+</div>
+
+<!-- main content -->
+	<div class="selling-title-container">
+		<h1 class="selling-title">
+			{{title}}
+		</h1>
+	</div>
+	
+	<div class="parent-container">
+		<div class="content-container">
+			<div class="selling-info">
+				<article class="definition activeTab" ng-if="isSet(1)">
+					<h2>Definition</h2>
+					<div class="definition-text">{{definition}}</div>
+				</article>
+				<article class="driver activeTab" ng-if="isSet(2)">
+					<h2>Drivers</h2>
+						<ul class="drivers-unordered" ng-repeat="driver in drivers">
+							<li class="driver-text">{{driver.text}}</li>
+							<ul class="sub-bullets">
+								<li ng-repeat="sub in driver.subbullets">{{sub.text}}</li>
+							</ul>
+						</ul>
+				</article>
+				<article class="approach activeTab" ng-if="isSet(3)">
+					<h2>Approaches That Work</h2>
+						<div ng-repeat="approach in approaches" class="approach-text">
+							{{approach.text}}
+						</div>
+				</article>
+				<article class="outcome activeTab" ng-if="isSet(4)">
+					<h2>Expected Outcomes</h2>
+					<ul class="expected-unordered" ng-repeat="outcome in outcomes">
+						<li class="outcome-text">{{outcome.text}}</li>
+						<ul class="sub-bullets">
+							<li ng-repeat="sub in outcome.subbullets">{{sub.text}}</li>
+						</ul>
+					</ul>
+				</article>
+			</div>
+		</div>
+	</div>
+
+<span class="arrow-left fa fa-chevron-left fa-2x" ng-click="previousItem()"></span>
+<span class="arrow-right fa fa-chevron-right fa-2x" ng-click="nextItem()"></span>
