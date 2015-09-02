@@ -203,7 +203,7 @@ ul.sub-bullets {
   width:800px;
   height: auto;
   min-height: 150px;
-  display: inline-block;
+  display: inline-flex;
   vertical-align: middle;
   overflow:scroll;
   padding: 15px 30px 30px 30px;
@@ -349,12 +349,6 @@ ul.sub-bullets {
       position: absolute;
       bottom:-15px;
     }
-    
-    .content-container {
-      height:100%;
-      position: absolute;
-      left:35px;
-    }
 
 }
 /*iPad Portrait*/
@@ -386,6 +380,7 @@ ul.sub-bullets {
     top: 897px;
     display: table;
     width:100%;
+    z-index: 100;
   }
 
   .action-item {
@@ -398,14 +393,30 @@ ul.sub-bullets {
     height: 100%;
   }
 
+  .content-container {
+      height:100%;
+  }
+
+  .content-container:before {
+    margin-right: -11.25em; /* Adjusts for spacing */
+  }
+
   .selling-info {
     width:700px;
+    height: auto;
+    min-height: 150px;
+    display: inline-flex;
+    vertical-align: middle;
+    overflow:scroll;
+    padding: 15px 30px 30px 30px;
+    background: #fff;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-box-shadow: 1px 2px 10px #9fbe3c;
+    -moz-box-shadow: 1px 2px 10px #9fbe3c;
+    box-shadow: 1px 2px 10px #9fbe3c;
   }
-
-  .selling-info article {
-    width:650px;
-  }
-
 }
 
 /***************************************************
