@@ -1,6 +1,9 @@
 #hamburger-menu {
 	color:#000;
 	opacity: .2;
+	position: absolute;
+	left:5px;
+	top:5px;
 }
 
 #menu {

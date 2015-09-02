@@ -21,16 +21,6 @@
   width:100%;
 }
 
-.dialmenu  {
-  width:100%;
-  margin:0 auto;
-}
-
-.slotholder {
-  width:1024px;
-  margin:0 auto;
-}
-
 ul.drivers-unordered, ul.expected-unordered {
   list-style-image: url('../images/mediafly-logo-small.png');
 }
@@ -40,14 +30,10 @@ ul.sub-bullets {
   list-style-type: circle;
 }
 
-/******************************************************************
-                         Radial Wheel
-******************************************************************/
 .title-container {
   width:100%;
   height:70px;
   background-color: #9fbe3c;
-  margin-top:-28px;
 }
 
 .title {
@@ -62,19 +48,15 @@ ul.sub-bullets {
   width:500px;
   margin:0 auto;
 }
-
-.dial-white-background {
-  border-radius: 50%;
-  width: 500px;
-  height: 500px; 
-  background:white;
-}
+/******************************************************************
+                         Radial Wheel
+******************************************************************/
 
 #piemenu { 
   height: 515px; 
   width: 515px; 
   margin-left: -257px; 
-  position: fixed;
+  position: absolute;
   bottom:-20px;
   left:50%;
   z-index: 100;
@@ -164,9 +146,6 @@ ul.sub-bullets {
   animation: zoomInDown 1s;
 }
 
-
-@media (max-width: 400px) { #piemenu { height: 300px; width: 300px; } }
-
 [class|=wheelnav-piemenu-slice-basic] {fill: transparent; stroke: none; }
 [class|=wheelnav-piemenu-slice-hover] {fill: transparent; stroke: none;}
 [class|=wheelnav-piemenu-slice-selected] {fill: transparent; stroke: none; }
@@ -189,9 +168,9 @@ ul.sub-bullets {
   width: 100%;
   height: 70px;
   background-color: #9fbe3c;
-  position: relative;
-  top: -48px;
   z-index: -1;
+  position: absolute;
+  top:0;
 }
 
 .selling-title {
@@ -199,38 +178,47 @@ ul.sub-bullets {
   font-size: 2.5em;
   color: #fff;
   vertical-align: middle;
-  position: relative;
-  top: 15px;
   font-weight: 300;
 }
 
-.parent-container{
-    display:table;
-    overflow:hidden;
-    margin:0px auto;
-    border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    -webkit-box-shadow: 1px 2px 10px #9fbe3c;
-    -moz-box-shadow: 1px 2px 10px #9fbe3c;
-    box-shadow: 1px 2px 10px #9fbe3c;
-}
+/*=============================================
+                Tab Information
+==============================================*/
 
 .content-container {
-  display:table-cell;
+    height:100%;
+    position: absolute;
+    left:185px;
+}
+
+.content-container:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
   vertical-align: middle;
+  margin-right: -0.25em; /* Adjusts for spacing */
 }
 
 .selling-info {
   width:800px;
   height: auto;
   min-height: 150px;
-  display: table-cell;
+  display: inline-block;
   vertical-align: middle;
   overflow:scroll;
   padding: 15px 30px 30px 30px;
   background: #fff;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-box-shadow: 1px 2px 10px #9fbe3c;
+  -moz-box-shadow: 1px 2px 10px #9fbe3c;
+  box-shadow: 1px 2px 10px #9fbe3c;
 }
+
+/*=============================================
+                Tab Controls
+==============================================*/
 
 .actions { 
   position: absolute; 
@@ -341,7 +329,7 @@ ul.sub-bullets {
 **********************************************************/
 
 /*iPad Landscape */
-@media only screen and (width: 1024px) {
+@media only screen and (width: 1024px) and (orientation: landscape) {
     #piemenu {
       position: absolute;
       bottom:-10px;
@@ -361,24 +349,20 @@ ul.sub-bullets {
       position: absolute;
       bottom:-15px;
     }
-
-    .parent-container {
+    
+    .content-container {
+      height:100%;
       position: absolute;
-      right:35px;
-    }
-
-    .selling-info {
-      width:800px;
-      vertical-align: middle;
+      left:35px;
     }
 
 }
 /*iPad Portrait*/
-@media only screen and (width: 768px) {
+@media only screen and (width: 768px) and (orientation: portrait) {
 
   #piemenu {
     position: relative;
-    top:-10px;
+    top:-25px;
   }
 
   .dial-circle {
@@ -534,28 +518,27 @@ ul.sub-bullets {
     width:100%;
   }
   #piemenu {
-    width:390px;
-    height:390px;
-    position: fixed;
-    left:50%;
-    bottom:55px;
-    margin-left: -195px;
+    width:310px;
+    height:310px;
+    position: absolute;
+    left:310px;
+    bottom:68px;
   }
   .dial-circle {
-    width: 300px;
+    width: 245px;
     height:auto;
     position: fixed;
     left:50%;
     bottom: 100px;
-    margin-left:-150px;
+    margin-left:-122px;
   }
   .top-dial {
-    width: 150px;
+    width: 117px;
     height: auto;
     position: fixed;
     left:50%;
-    margin-left:-75px;
-    bottom: 166px;
+    margin-left:-58px;
+    bottom: 158px;
   }
   .dial-shadow {
     width:300px;
