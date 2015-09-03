@@ -999,12 +999,117 @@ to do Android on it*/
 ****************************************************/
 /*Landscape*/
 @media only screen and (width:966px) and (orientation: landscape) {
+  #piemenu {
+    position: absolute;
+    left:203px;
+    bottom:-35px;
+  }
+  .dial-circle {
+    height:auto;
+    position: absolute;
+    left:200px;
+    bottom: 30px;
+  }
+  .top-dial {
+    height: auto;
+    position: absolute;
+    left:205px;
+    bottom: 108px;
+  }
+  .dial-shadow {
+    display: none;
+  }
 
+  .arrow-left, .arrow-right {
+    bottom:0;
+  }
+
+  .actions {
+    top:65px;
+  }
+
+  article h2 {
+    font-size:25px;
+  }
+
+  .approach-text {
+    font-size: 20px;
+  }
+
+  .sub-bullets li {
+    font-size:16px;
+  }
+
+  .driver-text, .outcome-text, .definition {
+    font-size: 20px;
+  }
+
+  .content-container {
+    left:185px;
+  }
+
+  .selling-info {
+    width:750px;
+    height: auto;
+    min-height: 150px;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -moz-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
 }
 
 /*Portrait*/
 @media only screen and (width:603px) and (orientation: portrait) {
+.actions {
+    position: absolute;
+    top: 840px;
+    left:-30px;
+    display: table;
+    width:100%;
+    z-index: 100;
+  }
 
+  .action-item {
+    display: inline-block;
+    width:115px;
+  }
+
+  .content-container {
+      height:100%;
+  }
+
+  .content-container:before {
+    margin-right: -12.25em; /* Adjusts for spacing */
+  }
+
+  .selling-info {
+    width:570px;
+    height: auto;
+    min-height: 150px;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -moz-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+
+  article h2 {
+    font-size:25px;
+  }
+
+  .approach-text {
+    font-size: 20px;
+  }
+
+  .sub-bullets li {
+    font-size:16px;
+  }
+
+  .driver-text, .outcome-text, .definition {
+    font-size: 20px;
+  }
 }
 
 /***************************************************
@@ -1012,10 +1117,237 @@ to do Android on it*/
 ****************************************************/
 /*Landscape*/
 @media only screen and (width:640px) and (orientation: landscape) {
+  .title-container {
+    height:40px;
+  }
+  .title {
+    font-size: 2em;
+    position: relative;
+    top:0;
+  }
+  #piemenu {
+    width:310px;
+    height:310px;
+    position: absolute;
+    left:230px;
+    bottom:-25px;
+  }
+  .dial-circle {
+    width: 245px;
+    height:auto;
+    position: absolute;
+    left:200px;
+    bottom: 5px;
+  }
+  .top-dial {
+    width: 117px;
+    height: auto;
+    position: absolute;
+    left:175px;
+    bottom: 65px;
+  }
+  .dial-shadow {
+    display: none;
+  }
 
+  /*second page*/
+  .content-container {
+      height:100%;
+      position: absolute;
+      left:100px;
+  }
+
+  .background-photo {
+    top:50px;
+  }
+
+  .selling-title-container {
+    height:50px;
+  }
+
+  .selling-title {
+    font-size:2em;
+    position: relativel
+    top:-10px;
+  }
+
+  .actions {
+    margin-left:-10px;
+    top:50px;
+  }
+
+  .action-item {
+    margin-top: 8px;
+  }
+
+  .menu-name {
+    font-size:.9em;
+  }
+
+  .action-icon {
+    font-size: 2em;
+  }
+
+  .content-container:before {
+    margin-right: -.25em;
+}
+
+  .selling-info {
+    width:525px;
+    height: auto;
+    min-height: 100px;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -moz-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    padding: 0px 30px 0px 30px;
+    margin-top: 30px;
+  }
+
+  .selling-info article {
+    width:570px;
+  }
+
+  article h2 {
+    font-size:17px;
+  }
+
+  .definition-text {
+    font-size:14px;
+    line-height: 1.5;
+  }
+
+  .driver-text, .outcome-text {
+    font-size: 12px;
+  }
+  .sub-bullets li {
+    font-size:10px;
+  }
+
+  .approach-text {
+    font-size: 14px;
+    line-height: 1.5;
+    padding-bottom: 15px;
+  }
 }
 
 /*Portrait*/
 @media only screen and (width:360px) and (orientation: portrait) {
+ .title-container {
+    height:50px;
+ }
 
+ .title {
+    font-size: 1.7em;
+    margin: 0 auto;
+    width:100%;
+  }
+  #piemenu {
+    width:310px;
+    height:310px;
+    position: absolute;
+    left:282px;
+    bottom:68px;
+  }
+  .dial-circle {
+    width: 245px;
+    height:auto;
+    position: fixed;
+    left:50%;
+    bottom: 100px;
+    margin-left:-122px;
+  }
+  .top-dial {
+    width: 117px;
+    height: auto;
+    position: fixed;
+    left:50%;
+    margin-left:-58px;
+    bottom: 158px;
+  }
+  .dial-shadow {
+    width:300px;
+    height:auto;
+    position: fixed;
+    left:50%;
+    bottom:15px;
+    margin-left:-150px;
+  }
+
+  /*second page*/
+  .selling-title-container {
+    height:50px;
+  }
+  .selling-title {
+    font-size:1.7em;
+    position: relative;
+    top:-7px;
+  }
+  .background-photo {
+    top:50px;
+  }
+  /*tab buttons*/
+  .actions {
+    position: absolute;
+    top: 530px;
+    left:-25px;
+    display: table;
+    width:100%;
+    z-index: 100;
+  }
+
+  .action-item {
+    display: inline-block;
+    width:65px;
+  }
+
+  .action-icon {
+    font-size:2.0em;
+  }
+
+  .menu-name {
+    font-size: .9em;
+  }
+
+
+  .content-container {
+      height:100%;
+      position: absolute;
+      left:7px;
+  }
+
+  .content-container:before {
+    margin-right: .5em;
+}
+  /*paragraph display*/
+  .selling-info {
+    width:330px;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -moz-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    padding:0px 15px 15px 15px;
+  }
+  .selling-info article {
+    font-size:18px;
+    width:330px;
+  }  
+  .selling-info article h2 {
+    font-size:20px;
+  }
+
+  .driver-text, .outcome-text {
+    font-size:14px;
+  }
+
+  .approach-text {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .sub-bullets li {
+    font-size:11px;
+  }
 }
