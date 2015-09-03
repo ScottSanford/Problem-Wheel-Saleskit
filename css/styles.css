@@ -203,7 +203,7 @@ ul.sub-bullets {
   width:800px;
   height: auto;
   min-height: 150px;
-  display: inline-flex;
+  display: inline-block;
   vertical-align: middle;
   overflow:scroll;
   padding: 15px 30px 30px 30px;
@@ -405,6 +405,10 @@ ul.sub-bullets {
     width:700px;
     height: auto;
     min-height: 150px;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -moz-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
     vertical-align: middle;
     overflow:scroll;
@@ -416,6 +420,10 @@ ul.sub-bullets {
     -webkit-box-shadow: 1px 2px 10px #9fbe3c;
     -moz-box-shadow: 1px 2px 10px #9fbe3c;
     box-shadow: 1px 2px 10px #9fbe3c;
+  }
+
+  .approach-text {
+    width:630px;
   }
 }
 
@@ -458,6 +466,12 @@ ul.sub-bullets {
   }
 
   /*second page*/
+  .content-container {
+      height:100%;
+      position: absolute;
+      left:145px;
+  }
+
   .background-photo {
     top:50px;
   }
@@ -468,7 +482,8 @@ ul.sub-bullets {
 
   .selling-title {
     font-size:2em;
-    top:10px;
+    position: relativel
+    top:-10px;
   }
 
   .actions {
@@ -484,15 +499,16 @@ ul.sub-bullets {
     font-size: 2em;
   }
 
-  .parent-container {
-    position: absolute;
-    right:10px;
-    top:65px;
-  }
-
   .selling-info {
     width:570px;
-    padding: 5px 15px 15px 15px;
+    height: auto;
+    min-height: 150px;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -moz-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    padding: 0px 30px 0px 30px;
   }
 
   .selling-info article {
@@ -500,7 +516,7 @@ ul.sub-bullets {
   }
 
   article h2 {
-    font-size:20px;
+    font-size:18px;
   }
 
   .definition-text {
@@ -508,14 +524,14 @@ ul.sub-bullets {
   }
 
   .driver-text, .outcome-text {
-    font-size: 16px;
+    font-size: 14px;
   }
   .sub-bullets li {
-    font-size:13px;
+    font-size:12px;
   }
 
   .approach-text {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.5;
   }
 
@@ -565,8 +581,10 @@ ul.sub-bullets {
   .actions {
     position: absolute;
     top: 625px;
+    left:-20px;
     display: table;
     width:100%;
+    z-index: 100;
   }
 
   .action-item {
@@ -580,6 +598,13 @@ ul.sub-bullets {
 
   .menu-name {
     font-size: 1em;
+  }
+
+
+  .content-container {
+      height:100%;
+      position: absolute;
+      left:17px;
   }
   /*paragraph display*/
   .selling-info {
@@ -598,7 +623,7 @@ ul.sub-bullets {
   }
 
   .approach-text {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.5;
   }
 
@@ -613,12 +638,230 @@ ul.sub-bullets {
 
 /*Landscape*/
 @media only screen and (width: 667px) and (orientation:landscape) {
+  .title-container {
+    height:40px;
+  }
+  .title {
+    font-size: 2em;
+    position: relative;
+    top:0;
+  }
+  #piemenu {
+    width:310px;
+    height:310px;
+    position: absolute;
+    left:230px;
+    bottom:-25px;
+  }
+  .dial-circle {
+    width: 245px;
+    height:auto;
+    position: absolute;
+    left:200px;
+    bottom: 5px;
+  }
+  .top-dial {
+    width: 117px;
+    height: auto;
+    position: absolute;
+    left:175px;
+    bottom: 65px;
+  }
+  .dial-shadow {
+    display: none;
+  }
 
+  /*second page*/
+  .content-container {
+      height:100%;
+      position: absolute;
+      left:100px;
+  }
+
+  .background-photo {
+    top:50px;
+  }
+
+  .selling-title-container {
+    height:50px;
+  }
+
+  .selling-title {
+    font-size:2em;
+    position: relativel
+    top:-10px;
+  }
+
+  .actions {
+    margin-left:-10px;
+    top:55px;
+  }
+
+  .action-item {
+    margin-top: 8px;
+  }
+
+  .menu-name {
+    font-size:.9em;
+  }
+
+  .action-icon {
+    font-size: 2em;
+  }
+
+  .selling-info {
+    width:550px;
+    height: auto;
+    min-height: 100px;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -moz-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    padding: 0px 30px 0px 30px;
+  }
+
+  .selling-info article {
+    width:570px;
+  }
+
+  article h2 {
+    font-size:17px;
+  }
+
+  .definition-text {
+    font-size:14px;
+    line-height: 1.5;
+  }
+
+  .driver-text, .outcome-text {
+    font-size: 12px;
+  }
+  .sub-bullets li {
+    font-size:10px;
+  }
+
+  .approach-text {
+    font-size: 14px;
+    line-height: 1.5;
+    padding-bottom: 15px;
+  }
 }
 
 /*Portrait*/
 @media only screen and (width:375px) and (orientation:portrait) {
+ .title-container {
+    height:50px;
+ }
 
+ .title {
+    font-size: 1.7em;
+    margin: 0 auto;
+    width:100%;
+  }
+  #piemenu {
+    width:310px;
+    height:310px;
+    position: absolute;
+    left:290px;
+    bottom:68px;
+  }
+  .dial-circle {
+    width: 245px;
+    height:auto;
+    position: fixed;
+    left:50%;
+    bottom: 100px;
+    margin-left:-122px;
+  }
+  .top-dial {
+    width: 117px;
+    height: auto;
+    position: fixed;
+    left:50%;
+    margin-left:-58px;
+    bottom: 158px;
+  }
+  .dial-shadow {
+    width:300px;
+    height:auto;
+    position: fixed;
+    left:50%;
+    bottom:15px;
+    margin-left:-150px;
+  }
+
+  /*second page*/
+  .selling-title-container {
+    height:50px;
+  }
+  .selling-title {
+    font-size:1.7em;
+    position: relative;
+    top:-7px;
+  }
+  .background-photo {
+    top:50px;
+  }
+  /*tab buttons*/
+  .actions {
+    position: absolute;
+    top: 550px;
+    left:-25px;
+    display: table;
+    width:100%;
+    z-index: 100;
+  }
+
+  .action-item {
+    display: inline-block;
+    width:70px;
+  }
+
+  .action-icon {
+    font-size:2.0em;
+  }
+
+  .menu-name {
+    font-size: .9em;
+  }
+
+
+  .content-container {
+      height:100%;
+      position: absolute;
+      left:7px;
+  }
+  /*paragraph display*/
+  .selling-info {
+    width:360px;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -moz-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    padding:0px 15px 15px 15px;
+  }
+  .selling-info article {
+    font-size:18px;
+    width:330px;
+  }  
+  .selling-info article h2 {
+    font-size:20px;
+  }
+
+  .driver-text, .outcome-text {
+    font-size:14px;
+  }
+
+  .approach-text {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .sub-bullets li {
+    font-size:11px;
+  }
 }
 
 /***************************************************
@@ -658,7 +901,9 @@ to do Android on it*/
 
 /*Portrait*/
 @media only screen and (width:600px) and (orientation: portrait) {
-
+  #piemenu {
+    
+  }
 }
 
 /***************************************************
